@@ -1,13 +1,12 @@
 import FeedbackBtn from '../../shared/components/FeedbackBtn';
 import s from './FeedbackOptions.module.css';
 
-const FeedbackOptions = () => {
-  console.log('1');
+const FeedbackOptions = ({ onIncrement }) => {
   return (
     <div>
-      <FeedbackBtn name="Good" />
-      <FeedbackBtn name="Neutral" />
-      <FeedbackBtn name="bad" />
+      <FeedbackBtn name="good" onIncrement={onIncrement} />
+      <FeedbackBtn name="neutral" onIncrement={onIncrement} />
+      <FeedbackBtn name="bad" onIncrement={onIncrement} />
     </div>
   );
 };
