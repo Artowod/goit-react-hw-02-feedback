@@ -13,11 +13,6 @@ class App extends React.Component {
 Потом обработчики-функции
 Потом РЕНДЕР.
 */
-  constructor() {
-    super();
-    this.x = 50;
-  }
-
   state = {
     good: 0,
     neutral: 0,
