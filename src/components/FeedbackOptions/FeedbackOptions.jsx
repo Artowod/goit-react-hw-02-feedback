@@ -1,5 +1,4 @@
 import FeedbackBtn from '../../shared/components/FeedbackBtn';
-import s from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ onIncrement }) => {
   return (

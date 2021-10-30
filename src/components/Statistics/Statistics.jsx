@@ -1,5 +1,4 @@
 import StatisticsElement from './StatisticsElement';
-import s from './Statistics.module.css';
 
 const Statistics = elements => {
   return (

@@ -1,4 +1,5 @@
 import s from './StatisticsElement.module.css';
+
 const StatisticsElement = ({ name, value }) => (
   <div className={s.wrapper}>
     <span className={s.name}>

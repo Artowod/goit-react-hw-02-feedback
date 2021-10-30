@@ -25,13 +25,8 @@ class App extends React.Component {
   };
 
   handleClick = event => {
-    /*     this.setState({ good: 5 }); */
-
-    /*     console.log(event.target.name); */
     this.setState(prevState => {
-      console.log(event.target.name);
       return { [event.target.name]: prevState[event.target.name] + 1 };
-      /*       return { [event.target.name]: /* [prevState.event.target.name]  + 1 */
     });
   };
 
