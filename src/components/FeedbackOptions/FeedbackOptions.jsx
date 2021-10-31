@@ -1,17 +1,18 @@
 import FeedbackBtn from '../../shared/components/FeedbackBtn';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({ onIncrement }) => {
+const FeedbackOptions = ({ options, onIncrement }) => {
   return (
     <div>
-      <FeedbackBtn name="good" onIncrement={onIncrement} />
-      <FeedbackBtn name="neutral" onIncrement={onIncrement} />
-      <FeedbackBtn name="bad" onIncrement={onIncrement} />
+      {options.map(btn => (
+        <FeedbackBtn name={btn} onIncrement={onIncrement} />
+      ))}
     </div>
   );
 };
 
 FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.number),
   onIncrement: PropTypes.func.isRequired,
 };
 

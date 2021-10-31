@@ -39,7 +39,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Section title="Please leave feedback">
-          <FeedbackOptions onIncrement={this.handleClick} />
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onIncrement={this.handleClick}
+          />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() === 0 ? (
