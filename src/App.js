@@ -13,11 +13,6 @@ class App extends React.Component {
 Потом обработчики-функции
 Потом РЕНДЕР.
 */
-  constructor() {
-    super();
-    this.x = 50;
-  }
-
   state = {
     good: 0,
     neutral: 0,
@@ -25,13 +20,8 @@ class App extends React.Component {
   };
 
   handleClick = event => {
-    /*     this.setState({ good: 5 }); */
-
-    /*     console.log(event.target.name); */
     this.setState(prevState => {
-      console.log(event.target.name);
       return { [event.target.name]: prevState[event.target.name] + 1 };
-      /*       return { [event.target.name]: /* [prevState.event.target.name]  + 1 */
     });
   };
 
@@ -49,7 +39,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Section title="Please leave feedback">
-          <FeedbackOptions onIncrement={this.handleClick} />
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onIncrement={this.handleClick}
+          />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() === 0 ? (
