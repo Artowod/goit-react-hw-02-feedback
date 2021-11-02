@@ -5,14 +5,14 @@ const FeedbackOptions = ({ options, onIncrement }) => {
   return (
     <div>
       {options.map(btn => (
-        <FeedbackBtn name={btn} onIncrement={onIncrement} />
+        <FeedbackBtn key={btn} name={btn} onIncrement={onIncrement} />
       ))}
     </div>
   );
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.number),
+  options: PropTypes.arrayOf(PropTypes.string),
   onIncrement: PropTypes.func.isRequired,
 };
 
