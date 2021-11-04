@@ -11,5 +11,4 @@ const Statistics = elements => {
     </>
   );
 };
-
 export default Statistics;
